@@ -1,0 +1,687 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BALLDIARY</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="wrap">
+        <div class="banner">
+            <div class="banner_bg"></div>
+            <div class="banner_text">
+                <span class="maintext">團購搶翻的貝果</span>
+                <span class="maintext">在這裡</span>
+            </div>
+        </div>
+        <div class="header" id="header">
+            <h1 class="logo">
+                <img src="images/logo02.png" alt="首頁">
+            </h1>
+            <a href="javascript:void(0)" class="menubar">
+                <img src="images/menubar.svg" alt="" onclick="barFunction()">
+            </a>
+            <ul class="menu" id="barmenu">
+                <li><a href="#" class="active menu01">首頁</a></li>
+                <li><a href="#" class="menu02">關於我們</a></li>
+                <li><a href="#" class="menu03">口味介紹</a></li>
+                <li><a href="#" class="menu04">訂購方案</a></li>
+                <li><a href="#" class="menu05">你可能會喜歡</a></li>
+            </ul>
+
+        </div>
+        <div class="content">
+            <div class="story" id="story">
+                <div class="parallelogram para_a animated">
+                    <h2>味覺上堅持「本物の味」</h2>
+                    <p>純天然手工，回歸食材的真正美味，杜絕任何人工香料及人造奶油來矇蔽你我的味蕾，並減少配方砂糖、奶油的比例來減輕對身體的負擔。</p>
+                </div>
+                <div class="parallelogram para_b animated">
+                    <h2>視覺上堅持「簡約」</h2>
+                    <p>不願意用五顏六色的裝飾來譁眾取寵，我們的身體不需要囤積無營養價值的顏料。</p>
+                </div>
+                <div class="parallelogram para_c animated">
+                    <h2>品質上堅持「安心」</h2>
+                    <p>不使用含有防腐劑之原料，運用最高規格的保鮮技術，在製造過程及產品完成後使用-40℃急速冷凍，以確保產品在您品嘗的瞬間是最美好的狀態</p>
+                </div>
+            </div>
+            <div class="item_flavor" id="item_flavor">
+                <div class="title_box">
+                    <span class="maintext">口味介紹</span>
+                    <span class="subtext">5種口味</span>
+                </div>
+                <div class="flavor_slider" id="flavor_slider">
+                    <ul class="slider_list">
+                        <li class="items fade">
+                            <div class="itempic">
+                                <img src="images/芝麻貝果.jpg" alt="">
+                            </div>
+                            <div class="flavor_text">
+                                <h3 class="maintext">原味貝果</h3>
+                                <p class="subtext">我是原味，少糖無油表皮Q韌又有嚼勁的原味貝果是家中常常出現的一款麵包，無論直接吃或做成三明治都非常美味。</p>
+                            </div>
+                        </li>
+                        <li class="items fade">
+                            <div class="itempic">
+                                <img src="images/芝麻貝果.jpg" alt="">
+                            </div>
+                            <div class="flavor_text">
+                                <h3 class="maintext">全麥貝果</h3>
+                                <p class="subtext">我是全麥，少糖無油表皮Q韌又有嚼勁的原味貝果是家中常常出現的一款麵包，無論直接吃或做成三明治都非常美味。</p>
+                            </div>
+                        </li>
+                        <li class="items fade">
+                            <div class="itempic">
+                                <img src="images/芝麻貝果.jpg" alt="">
+                            </div>
+                            <div class="flavor_text">
+                                <h3 class="maintext">花生貝果</h3>
+                                <p class="subtext">我是花生，少糖無油表皮Q韌又有嚼勁的原味貝果是家中常常出現的一款麵包，無論直接吃或做成三明治都非常美味。</p>
+                            </div>
+                        </li>
+                        <li class="items fade">
+                            <div class="itempic">
+                                <img src="images/芝麻貝果.jpg" alt="">
+                            </div>
+                            <div class="flavor_text">
+                                <h3 class="maintext">藍莓貝果</h3>
+                                <p class="subtext">我是藍莓，少糖無油表皮Q韌又有嚼勁的原味貝果是家中常常出現的一款麵包，無論直接吃或做成三明治都非常美味。</p>
+                            </div>
+                        </li>
+                        <li class="items fade">
+                            <div class="itempic">
+                                <img src="images/芝麻貝果.jpg" alt="">
+                            </div>
+                            <div class="flavor_text">
+                                <h3 class="maintext">芝麻貝果</h3>
+                                <p class="subtext">我是芝麻，少糖無油表皮Q韌又有嚼勁的原味貝果是家中常常出現的一款麵包，無論直接吃或做成三明治都非常美味。</p>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="slider_arrow">
+                        <span class="prev">&#10094;&#10094;</span>
+                        <span class="next">&#10095;&#10095;</span>
+                    </div>
+                </div>
+            </div>
+            <div class="order_plan" id="order_plan">
+                <div class="title_box">
+                    <span class="maintext">訂購方案</span>
+                    <span class="subtext">※貝果口味(原味、花生、芝麻、藍莓、全麥)</span>
+                    <span class="subtext">※請記得備註貝果的口味數量(無備註口味將隨機出貨)</span>
+                </div>
+                <ul class="plan_items">
+                    <li class="item order_btn" id="order_btn">
+                        <div class="item_img">
+                            <img src="images/bagelitem.jpg" alt="">
+                        </div>
+                        <div class="item_text">
+                            <p>NT$ <span class="price">110</span></p>
+                            <h3 class="title">單一口味3入</h3>
+                        </div>
+                        <div class="shopicon">
+                            <img src="images/shopping-bag.svg" alt="">
+                        </div>
+                    </li>
+                    <li class="item order_btn">
+                        <div class="item_img">
+                            <img src="images/bagelitem.jpg" alt="">
+                        </div>
+                        <div class="item_text">
+                            <p>NT$ <span class="price">220</span></p>
+                            <h3 class="title">單一口味6入</h3>
+                        </div>
+                        <div class="shopicon">
+                            <img src="images/shopping-bag.svg" alt="">
+                        </div>
+                    </li>
+                    <li class="item order_btn">
+                        <div class="item_img">
+                            <img src="images/bagelitem.jpg" alt="">
+                        </div>
+                        <div class="item_text">
+                            <p>NT$ <span class="price">220</span></p>
+                            <h3 class="title">2種口味6入</h3>
+                        </div>
+                        <div class="shopicon">
+                            <img src="images/shopping-bag.svg" alt="">
+                        </div>
+                    </li>
+                    <li class="item order_btn">
+                        <div class="item_img">
+                            <img src="images/bagelitem.jpg" alt="">
+                        </div>
+                        <div class="item_text">
+                            <p>NT$ <span class="price">330</span></p>
+                            <h3 class="title">3種口味9入</h3>
+                        </div>
+                        <div class="shopicon">
+                            <img src="images/shopping-bag.svg" alt="">
+                        </div>
+                    </li>
+                    <li class="item order_btn">
+                        <div class="item_img">
+                            <img src="images/bagelitem.jpg" alt="">
+                        </div>
+                        <div class="item_text">
+                            <p>NT$ <span class="price">550</span></p>
+                            <h3 class="title">5種口味15入</h3>
+                        </div>
+                        <div class="shopicon">
+                            <img src="images/shopping-bag.svg" alt="">
+                        </div>
+                    </li>
+                </ul>
+                <div class="order_way" id="order_way">
+                    <div class="way_content">
+                        <span class="close">&times;</span>
+                        <p>請選擇付款方式</p>
+                        <button id="op_modal">貨到付款</button>
+                    </div>
+                </div>
+                <div class="order_content_bg" id="order_content_modal">
+                    <div class="order_inner">
+                        <div class="order_content">
+                            <span class="order_close">&times;</span>
+                            <div class="content_text">
+                                <div class="order_notice">※貨到付款為宅配到府，非全家超商取貨/付款</div>
+                                <!-- <div class="order_notice">如需全家超商取貨，請點此</div> -->
+                                <div class="order_notice_title">貨到付款需另加代收手續費$30</div>
+                                <div class="order_notice">※僅限本島配送</div>
+                            </div>
+                            <hr />
+                            <div class="order_form">
+                                <div class="form_group itemName">
+                                    <label>訂購商品名稱</label>
+                                    <span></span>
+                                </div>
+                                <div class="form_group">
+                                    <label>付款方式</label>
+                                    <span>貨到付款</span>
+                                </div>
+                                <div class="form_group itemPrice">
+                                    <label>價錢(商品價格+手續費)</label>
+                                    <span></span>
+                                </div>
+                                <div class="form_group">
+                                    <label for="name"></label>
+                                    <input type="text" placeholder="收件人姓名">
+                                </div>
+                                <div class="form_group">
+                                    <label for="phone"></label>
+                                    <input type="text" placeholder="收件人手機">
+                                </div>
+                                <div class="form_group">
+                                    <label for="email"></label>
+                                    <input type="text" placeholder="收件人電子郵件">
+                                </div>
+                                <div class="form_group">
+                                    <label></label>
+                                    <input type="text" placeholder="收件人住址">
+                                </div>
+                                <div class="form_group">
+                                    <label></label>
+                                    <textarea name="message" id="" cols="30" rows="10"
+                                        placeholder="備註(數量請於備註欄填寫)"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="order_button">
+                            <button>送出訂單</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="comments" id="comments">
+                <div class="title_box">
+                    <span class="maintext">老饕大聲說</span>
+                    <span class="subtext">看看老饕買了什麼，怎麼評價</span>
+                </div>
+                <div class="cards">
+                    <div class="card showed">
+                        <div class="client">
+                            <img src="images/person.jpg" alt="">
+                        </div>
+                        <div class="container">
+                            <span class="date">2020-07-07</span>
+                            <p>掛絕壁，松枯倒倚，落殘霞孤鷺齊飛。四周不盡山，一望無窮水。散西風滿天秋意。</p>
+                        </div>
+                    </div>
+                    <div class="card showed">
+                        <div class="client">
+                            <img src="images/person2.png" alt="">
+                        </div>
+                        <div class="container">
+                            <span class="date">2020-07-08</span>
+                            <p>掛絕壁，松枯倒倚，落殘霞孤鷺齊飛。四周不盡山，一望無窮水。散西風滿天秋意。</p>
+                        </div>
+                    </div>
+                    <div class="card showed">
+                        <div class="client">
+                            <img src="images/person.jpg" alt="">
+                        </div>
+                        <div class="container">
+                            <span class="date">2020-07-09</span>
+                            <p>掛絕壁，松枯倒倚，落殘霞孤鷺齊飛。四周不盡山，一望無窮水。散西風滿天秋意。</p>
+                        </div>
+                    </div>
+                    <div class="card showed">
+                        <div class="client">
+                            <img src="images/person2.png" alt="">
+                        </div>
+                        <div class="container">
+                            <span class="date">2020-07-10</span>
+                            <p>掛絕壁，松枯倒倚，落殘霞孤鷺齊飛。四周不盡山，一望無窮水。散西風滿天秋意。</p>
+                        </div>
+                    </div>
+                    <div class="card showed">
+                        <div class="client">
+                            <img src="images/person.jpg" alt="">
+                        </div>
+                        <div class="container">
+                            <span class="date">2020-07-11</span>
+                            <p>掛絕壁，松枯倒倚，落殘霞孤鷺齊飛。四周不盡山，一望無窮水。散西風滿天秋意。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="precautions" id="precautions">
+                <div class="title_box">
+                    <span class="maintext">你可能會喜歡</span>
+                    <span class="subtext">蹦出新滋味</span>
+                </div>
+                <ul class="other_items">
+                    <li class="item other_btn" onclick="set(0)">
+                        <div class="item_img">
+                            <img src="images/jam.jpg" alt="">
+                        </div>
+                        <div class="item_text">
+                            <p>NT$ <span class="price">110</span></p>
+                            <h3 class="title">無糖花生醬</h3>
+                        </div>
+                        <div class="loupeicon">
+                            <img src="images/loupe.svg" alt="">
+                        </div>
+                    </li>
+                    <li class="item other_btn" onclick="set(1)">
+                        <div class="item_img">
+                            <img src="images/jam.jpg" alt="">
+                        </div>
+                        <div class="item_text">
+                            <p>NT$ <span class="price">220</span></p>
+                            <h3 class="title">黑芝麻醬</h3>
+                        </div>
+                        <div class="loupeicon">
+                            <img src="images/loupe.svg" alt="">
+                        </div>
+                    </li>
+                    <li class="item other_btn" onclick="set(2)">
+                        <div class="item_img">
+                            <img src="images/jam.jpg" alt="">
+                        </div>
+                        <div class="item_text">
+                            <p>NT$ <span class="price">330</span></p>
+                            <h3 class="title">草莓果醬</h3>
+                        </div>
+                        <div class="loupeicon">
+                            <img src="images/loupe.svg" alt="">
+                        </div>
+                    </li>
+                    <li class="item other_btn" onclick="set(3)">
+                        <div class="item_img">
+                            <img src="images/tea.jpg" alt="">
+                        </div>
+                        <div class="item_text">
+                            <p>NT$ <span class="price">440</span></p>
+                            <h3 class="title">台灣魚池18號紅茶</h3>
+                        </div>
+                        <div class="loupeicon">
+                            <img src="images/loupe.svg" alt="">
+                        </div>
+                    </li>
+                    <li class="item other_btn" onclick="set(4)">
+                        <div class="item_img">
+                            <img src="images/tea.jpg" alt="">
+                        </div>
+                        <div class="item_text">
+                            <p>NT$ <span class="price">550</span></p>
+                            <h3 class="title">有機金萱</h3>
+                        </div>
+                        <div class="loupeicon">
+                            <img src="images/loupe.svg" alt="">
+                        </div>
+                    </li>
+                    <li class="item other_btn" onclick="set(5)">
+                        <div class="item_img">
+                            <img src="images/tea.jpg" alt="">
+                        </div>
+                        <div class="item_text">
+                            <p>NT$ <span class="price">550</span></p>
+                            <h3 class="title">紅烏龍</h3>
+                        </div>
+                        <div class="loupeicon">
+                            <img src="images/loupe.svg" alt="">
+                        </div>
+                    </li>
+                    <li class="item other_btn" onclick="set(6)">
+                        <div class="item_img">
+                            <img src="images/nut.jpg" alt="">
+                        </div>
+                        <div class="item_text">
+                            <p>NT$ <span class="price">380</span></p>
+                            <h3 class="title">綜合堅果</h3>
+                        </div>
+                        <div class="loupeicon">
+                            <img src="images/loupe.svg" alt="">
+                        </div>
+                    </li>
+                </ul>
+                <div class="other_content_bg" id="other_content_modal">
+                    <div class="other_inner">
+                        <span class="other_close">&times;</span>
+                        <div class="other_content">
+                            <div class="otherpic">
+                            </div>
+                            <div class="other_text">
+                                <div class="otherName">
+                                </div>
+                                <div class="ingredient"></div>
+                                <div class="scription">
+                                </div>
+                                <div class="gobuy_btn">
+                                    <button>前往購買</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="media_icon">
+                <img src="images/facebook.svg" alt="">
+                <img src="images/line.svg" alt="">
+                <img src="images/buy-button.svg" alt="" style="background-color: yellow;" class="buy_icon">
+            </div>
+        </div>
+        <div class="footer" id="footer">
+            <ul>
+                <li>客服信箱：balldiary@balldiary.com</li>
+                <li>客服電話：(00)123-4567</li>
+                <li class="popup" onclick="popupFunction()">購物須知
+                    <span class="popuptext"
+                        id="popupmemo">常記溪亭日暮，沉醉不知歸路。興盡晚回舟，誤入藕花深處。爭渡，爭渡，驚起一灘鷗鷺。常記溪亭日暮，沉醉不知歸路。興盡晚回舟，誤入藕花深處。爭渡，爭渡，驚起一灘鷗鷺。常記溪亭日暮，沉醉不知歸路。興盡晚回舟，誤入藕花深處。爭渡，爭渡，驚起一灘鷗鷺。</span>
+                </li>
+                <li>© BALLDIARY. All Rights Reserved</li>
+            </ul>
+        </div>
+    </div>
+    <script src="jquery-3.5.1.min.js"></script>
+    <script>
+
+        $(document).ready(function ($) {
+            // var slideCount = $('.slider_list li').length;
+            // var slideWidth = $('.slider_list li').width();
+            var slideHeight = $('.slider_list li').height();
+            // var arrowHeight = $('.slider_arrow').height();
+            // var slideUlWidth = slideCount * slideWidth;
+
+            var left = $(".slider_list").css("left");
+            left = left.substring(0, left.length - 2);
+            left = parseInt(left);
+            $(".slider_list").css("left", left + "px")
+            $("#flavor_slider").css("height", slideHeight * 1.1 + "px")
+
+            //輪播部分
+            $('.slider_list li:last-child').prependTo('.slider_list');
+            function moveLeft() {
+                $('.slider_list').animate({
+                    //left: + slideWidth
+                    left: 300
+                }, 500, function () {
+                    $('.slider_list li:last-child').prependTo('.slider_list');
+                    $('.slider_list').css('left', '');
+                })
+            }
+            function moveRight() {
+                $('.slider_list').animate({
+                    //left: - slideWidth
+                    left: -400
+                }, 500, function () {
+                    $('.slider_list li:first-child').appendTo('.slider_list');
+                    $('.slider_list').css('left', '');
+                });
+            };
+            $('.prev').click(function () { //上一張按鈕
+                moveLeft();
+            });
+            $('.next').click(function () { //下一張按鈕
+                moveRight();
+            });
+            $(window).resize(function () {
+                width = $("#flavor_slider").width();
+            })
+        });
+
+        window.onscroll = function () {
+            myFunction();
+        }
+        var navbar = document.getElementById("header");
+        var sticky = navbar.offsetTop;
+
+        function myFunction() {
+            if (window.pageYOffset >= sticky) {
+                navbar.classList.add("sticky")
+            } else {
+                navbar.classList.remove("sticky");
+            }
+        }
+
+        function barFunction() {
+            var toggleMenu = document.getElementById("barmenu");
+            if (toggleMenu.className === "menu") {
+                toggleMenu.className += " respon_menu";
+            } else {
+                toggleMenu.className = "menu";
+            }
+        }
+
+        //footer 購物須知部分
+        function popupFunction() {
+            var popup = document.getElementById("popupmemo");
+            popup.classList.toggle("show");
+        }
+
+        //選擇付款方式視窗
+        var orderway = document.getElementById("order_way"); //get the modal
+        //選擇付款方式的關閉按鈕
+        var orderwayclose = document.getElementsByClassName("close")[0];
+
+        $(".order_btn").each(function () {
+            $(this).click(function () {
+                orderway.style.display = "block";
+                var itemName = $(this).find(".title").text();
+                $(".order_form").find(".itemName span").text(itemName);
+                var itemPrice = $(this).find(".item_text .price").text();
+                $(".order_form").find(".itemPrice span").text("NT$ " + (Number(itemPrice) + 30));
+            });
+        });
+
+        orderwayclose.onclick = function () {
+            orderway.style.display = "none";
+        }; //when the user clicks on <span> (x), close the modal
+
+        // window.onclick = function (event) {
+        //     if (event.target == modal) {
+        //         orderway.style.display = "none";
+        //     };
+        // }; //when the user clicks antwhere outside of the modal, close it
+
+
+        //你可能會喜歡的產品視窗
+        var otherModal = document.getElementById("other_content_modal");
+        var otherClose = document.getElementsByClassName("other_close")[0];
+        otherClose.onclick = function () {
+            otherModal.style.display = "none";
+        };
+        $(".gobuy_btn").click(function () {
+            orderway.style.display = "block";
+            otherModal.style.display = "none";
+        });
+        $(".other_btn").each(function () {
+            $(this).click(function () {
+                var otherItemName = $(this).find(".item_text .title").text();
+                $(".order_form").find(".itemName span").text(otherItemName);
+                var otherItemPrice = $(this).find(".item_text .price").text();
+                $(".order_form").find(".itemPrice span").text("NT$ " + (Number(otherItemPrice) + 30));
+            });
+        });
+
+        function set(n) {
+            $(".other_btn").each(function () {
+                $(this).click(function () {
+                    otherModal.style.display = "block";
+                    var itemPic = $(this).find(".item_img").html();
+                    $(".other_content").find(".otherpic").html(itemPic);
+                    $(".otherName").text(json[n].itemName);
+                    $(".ingredient").text(json[n].ingredient);
+                    $(".scription").text(json[n].scription);
+                });
+            })
+        }
+
+        /*填寫訂單資料*/
+        var order_content_modal = document.getElementById("order_content_modal");
+
+        var order_btn = document.getElementById("op_modal");
+
+        order_btn.onclick = function () {
+            orderway.style.display = "none";
+            order_content_modal.style.display = "block";
+        };
+
+        var order_close = document.getElementsByClassName("order_close")[0];
+
+        order_close.onclick = function () {
+            order_content_modal.style.display = "none";
+        }
+
+        //滑動至該處
+        $(document).ready(function () {
+            //var windowHeight=$(window).height();
+            //var scrollPos = $(window).scrollTop();
+            $(function () {
+                $(".menu01").click(function () {
+                    $('html,body').animate({
+                        scrollTop: 0
+                    }, 700);
+                });
+            });
+            $(function () {
+                $(".menu02").click(function () {
+                    $('html,body').animate({
+                        scrollTop: $('#story').offset().top - 70
+                    }, 700);
+                });
+            });
+            $(function () {
+                $(".menu03").click(function () {
+                    $('html,body').animate({
+                        scrollTop: $('#item_flavor').offset().top - 80
+                    }, 700);
+                });
+            });
+            $(function () {
+                $(".menu04").click(function () {
+                    $('html,body').animate({
+                        scrollTop: $('#order_plan').offset().top - 80
+                    }, 700);
+                });
+            });
+            $(function () {
+                $(".menu05").click(function () {
+                    $('html,body').animate({
+                        scrollTop: $('#precautions').offset().top - 80
+                    }, 700);
+                });
+            });
+            $(function () {
+                $(".buy_icon").click(function () {
+                    $('html,body').animate({
+                        scrollTop: $('#order_plan').offset().top - 80
+                    }, 700);
+                });
+            });
+
+
+
+            $(window).scroll(function () {
+                var windowWidth = $(window).width();
+                var windowHeight = $(window).height();
+                var scrollPos = $(window).scrollTop();
+                if (windowWidth > 768) {
+                    //story三區塊
+                    $(".animated").each(function () {
+                        var thisPos = $(this).offset().top;
+                        if ((windowHeight + scrollPos) >= thisPos) {
+                            $(this).addClass("fadeIn");
+                        };
+                    });
+                    //評論區塊
+                    $(".showed").each(function () {
+                        var thisPos = $(this).offset().top;
+                        if ((windowHeight + scrollPos) >= thisPos) {
+                            $(this).addClass("showUp");
+                        };
+                    });
+                }
+            });
+        });
+
+        var json = [
+            {
+                "id": "1",
+                "itemName": "無糖花生醬",
+                "ingredient": "選用當季台灣本土11號花生，無添加防腐劑和乳化劑，研磨後直接真空灌裝保有最原始風味。",
+                "scription": "因無添加防腐劑的原故，為確保產品新鮮度，花生醬研磨後立即以真空罐裝機進行封口，能抑制黴菌和細菌的生長，也確保運送過程不會因為高溫滋生黴菌，並能提高產品保存期限。"
+            },
+            {
+                "id": "2",
+                "itemName": "黑芝麻醬",
+                "ingredient": "100%新鮮芝麻，經多道研磨，形成質地細緻綿密，口感滑順的純黑芝麻醬。",
+                "scription": "不添加任何調味料、人工色素及防腐劑。適用於甜點及其他烘焙製品或日式豆腐。可依個人喜好加入醬油、果糖、味醂、高湯或辣油…等配料，作為生菜沙拉醬、火鍋沾醬、涼麵拌醬等，或直接加果糖調成芝麻飲料，濃郁的芝麻香味讓食物更美味！"
+            },
+            {
+                "id": "3",
+                "itemName": "草莓果醬",
+                "ingredient": "選用南投國姓草莓農場栽培的草莓，真材實料的天然滋味，吃的到一整顆果粒。",
+                "scription": "甜中帶著微酸滋味，這是草莓讓人聯想到戀愛的原因。不添加色素、香精、防腐劑等化學添加物，適合大小朋友安心享用，可做抹醬、特調草莓果茶，冰淇淋淋醬等。"
+            },
+            {
+                "id": "4",
+                "itemName": "台灣魚池18號紅茶-茶包(10入/盒)",
+                "scription": "茶香似有若無，茶質似淺若深，茶韻欲語還休，茶味欲走還留入口清爽、甜潤，帶有淡淡的薄荷肉桂香"
+            },
+            {
+                "id": "5",
+                "itemName": "有機金萱-茶包(10入/盒)",
+                "scription": "純天然濃郁金萱茶香氣並帶著淡淡的奶香及花香，茶葉厚度適中、甘醇滑口、自然回甘。品嚐一口金萱茶，撲鼻的香氣讓你終日無法忘懷。"
+            },
+            {
+                "id": "6",
+                "itemName": "紅烏龍-茶包(10入/盒)",
+                "scription": "茶湯水色琥珀橙紅，明亮澄清，茶質厚重具熟果香，滋味醇厚圓滑、富有活性、耐泡、甘醇，紅烏龍屬著重烘焙之烏龍茶，長久存放不易變質，適合當陳年茶典藏。"
+            },
+            {
+                "id": "7",
+                "itemName": "綜合堅果",
+                "ingredient": "胡桃、夏威夷果、腰果、核桃、杏仁果。",
+                "scription": "接單新鮮現烘焙，養生又營養；低溫烘培、無任何調味吃到堅果的美味；天然零嘴，沙拉優格的最佳好朋友；採用環保鐵罐，完整密封鎖住食材原有風味，並充填氮氣，開封即可感受鮮度，提供更優良的賞味品質與營養保存，吃健康護地球！"
+            }
+        ]
+
+    </script>
+</body>
+
+</html>

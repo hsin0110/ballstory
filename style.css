@@ -1,0 +1,890 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/*start*/
+*{   
+    box-sizing: border-box;
+}
+body{
+    font-family: 微軟正黑體;
+}
+/*表頭*/
+/*banner*/
+.banner{
+    position: relative;
+}
+.banner_bg{
+    background-image: url(images/banner_bac.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding: 20%;
+    filter: blur(4px);
+}
+.banner_text{
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
+    color: white;
+    font-weight: bold;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    width: 80%;
+    padding: 3%;
+    text-align: center;
+}
+.banner_text span{
+    font-size: 4em;
+    display: block;
+    margin: 1em 0;
+}
+.header{
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0.3em 0;
+    background-color: white;
+    z-index: 2;
+}
+.header .menubar{
+    display: none;
+} 
+.header .menu{
+    display:flex;
+    overflow: hidden;
+}
+.header .menu li{
+    width: 160px;
+}
+.header .menu li a{
+    display: block;
+    padding: 1em;
+    text-decoration: none;
+    font-size: 1.2em;
+    color: #000;
+    font-weight: bolder;
+    text-align: center;
+}
+.header .menu li a:hover{
+    background-color: #FBCF9A;
+    color: #5B5B5B;
+    border-radius: 0.5em;
+}
+.header .menu .active{
+    background-color: #EEC4CB;
+    border-radius: 0.5em;
+}
+.header .baricon{
+    display: none;
+}
+
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}  
+.sticky + .content {
+    padding-top: 100px;
+}
+/*內容區塊*/
+.content{
+    position: relative;
+}
+/*各內容標題*/
+.title_box{
+    background-color:#4c4c4c;
+    padding: 1.5em 0;
+    color: white;
+}
+.title_box span.maintext{
+    display: block;
+    font-size: 2.8em;
+    margin-bottom: 0.3em;
+    text-align: center;
+}
+.title_box span.subtext{
+    display: block;
+    text-align: center;
+    font-size: 1.2em;    
+    margin-top: 1em;
+}
+/*品牌故事*/
+.content .story{
+    background-image: url(images/story_bac01.jpg);
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: contain;
+    padding-bottom: 3em;
+    padding-top: 1em;
+    background-color: #FFCB47;
+}
+.content .story .parallelogram {
+    width: 40%;
+	transform: skew(7deg);
+    background:#fffcfce7;
+    margin-left: 3em;
+    margin-top: 2em;
+}
+.content .story .para_b{
+    margin-left: 6em;
+}
+.content .story .para_c{
+    margin-left: 9em;
+}
+.content .story .parallelogram h2{
+    font-size: 1.8em;
+    padding: 0.5em;
+}
+.content .story .parallelogram p{
+    font-size: 1em;
+    padding: 0.8em;
+    line-height: 1.5;
+}
+.animated{
+    opacity: 0;
+    transition: all 3s;
+}
+.fadeIn{
+    opacity: 1;
+}
+.showed{
+    opacity: 0;
+    transition: ease-in 1s;
+    transform: translateY(50px);
+}
+.showUp{
+    opacity: 1;
+    transform: translateY(0);
+}
+/*口味介紹*/
+.content .item_flavor{
+    background-color:#FFFFDF;
+    padding-bottom: 1%;
+}
+.content .item_flavor #flavor_slider{
+    overflow: hidden;
+    margin: 0 auto;
+    position: relative;
+    width:90%;
+}
+#flavor_slider .slider_list{
+    position: absolute;
+    left: 0;
+    width: 195%;
+}
+#flavor_slider .items{
+    width: 17%;
+    float: left;
+    margin: 2% 0;
+}
+#flavor_slider .items .itempic{
+    width: 50%;
+    margin: 0 auto;
+}
+#flavor_slider .items img{
+    width: 100%;
+    border-radius: 50%;
+}
+#flavor_slider .slider_list:after{
+    content:'';
+    display: block;
+    clear: both;
+}
+#flavor_slider .slider_arrow{
+    display: flex;
+}
+#flavor_slider .prev, #flavor_slider .next{
+    cursor:pointer;
+    display: block;
+    padding: 0.5em;
+    font-weight: bold;
+    font-size: 1.8em;
+    color:white;
+    text-decoration: none;
+    text-align: center;
+    position: absolute;
+    top: 5%;
+    background-color:rgba(0,0,0, 0.4);
+    border-radius: 20%;
+}
+#flavor_slider .prev{
+    left: 2%;
+}
+#flavor_slider .next{
+    right: 2%;
+}
+/*
+.fade{
+    animation-name:fade;
+    animation-duration:0.5s;
+}
+@keyframes fade{
+    from{left:0}
+    to{left:120px}
+}*/
+#flavor_slider .flavor_text{
+    font-size: 1.2em;
+    padding: 1em;
+}
+#flavor_slider .flavor_text h3{
+    font-size: 1.4em;
+    margin-bottom: 0.5em;
+    color: white;
+    background-color:#4c4c4c;
+    text-align: center;
+    letter-spacing: 0.2em;
+    padding: 0.5em 0;
+}
+#flavor_slider .flavor_text p{
+    line-height: 1.5;
+    text-align: left;
+}
+/*訂購方案*/
+.content .order_plan .plan_items{
+    display: flex;
+    flex-wrap: wrap;
+}
+.content .order_plan .plan_items .item{
+    width: 31.333%;
+    margin: 0.8em 1%;
+    position: relative;
+    background-color: white;
+    transform: scale(0.9);
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+.content .order_plan .plan_items .item:hover{
+    transform: scale(1);
+    transition: 0.7s ease;
+    cursor: pointer;
+}
+
+.content .order_plan .plan_items .item img{
+    width: 100%;
+}
+.content .order_plan .plan_items p{
+    display: block;
+    font-size: 1.5em; 
+    text-align: center;  
+    padding: 0.8em 0;
+    color: palevioletred;
+}
+.content .order_plan .plan_items .title{
+    display: block;
+    font-size: 2em;
+    text-align: center;  
+    padding:0.5em 0;
+}
+.content .order_plan .plan_items .shopicon{
+    width: 15%;
+    position: absolute;
+    right: 5%;
+    bottom: 18%;
+    background-color: lightgray;
+    padding: 0.8em;
+    border-radius: 50%;
+}
+/*訂購方式*/
+.order_way{
+    display: none;
+    position: fixed;
+    z-index: 3;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0, 0.4);
+}
+.way_content{
+    background-color: #fefefe;
+    margin:5em auto;
+    padding: 0em 1em;
+    width: 35%;
+    border-radius: 1em;
+}
+.way_content p{
+    font-size: 1.5em;
+    text-align: center;
+    padding: 1em;
+    border-bottom: 0.2em solid silver;
+}
+.way_content button{
+    padding: 0.5em;
+    font-size: 1em;
+    font-weight: bolder;
+    width: 30%;
+    background-color: #FFCB47;  
+    display: block;
+    margin: 1em auto;  
+    border-radius: 0.5em;
+    cursor: pointer;
+    border: none;
+}
+.way_content button:hover{
+    background-color: rgba(0,0,0, 0.5);
+    color: seashell;
+}
+.order_way .close{
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bolder;
+}
+.way_content:after{
+    content: '';
+    overflow: hidden;    
+    clear: both;
+    display: block;
+    width: 0;
+    height: 0;
+}
+.order_way .close:hover, .order_way .close:focus{
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+/*填寫訂購資料*/
+.order_content_bg{
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0, 0.4);
+}
+.order_content_bg .order_inner{
+    background-color: #fefefe;
+    margin:1em auto;
+    width: 40%;
+}
+.order_content_bg .order_inner .order_content{
+    overflow: overlay;
+    height: 25em;
+}
+.order_content_bg .order_inner .content_text,
+.order_content_bg .order_inner .order_form{
+    width: 80%;
+    margin: 0 auto;
+}
+.order_content_bg .order_inner .content_text .order_notice{
+    margin: 0.8em 0;
+    color: red;
+}
+.order_content_bg .order_inner .content_text .order_notice_title{
+    margin: 0.8em 0;
+    font-weight: bolder;
+}
+.order_content_bg .order_inner .order_form .form_group{
+    margin: 1em 0;
+}
+.order_content_bg .order_inner .order_form .form_group label{
+    font-weight: bolder;
+    display: block;
+    margin: 0.4em 0;
+}
+.order_content_bg .order_inner .order_form .form_group span{
+    font-weight: bolder;
+    color:	#2828FF;
+}
+.order_content_bg .order_inner .order_form input{
+    width: 100%;
+    padding: 0.5em 0;
+}
+.order_content_bg .order_inner .order_form textarea{
+    width: 100%;
+}
+.order_content_bg .order_inner .order_button{
+    border-top: 0.1em solid silver;
+    padding: 0.5em;
+}
+.order_content_bg .order_inner .order_button button{
+    display: block;
+    width: 30%;
+    padding: 0.3em;
+    margin: auto;
+    font-size: 1em;
+    border: none;
+    background-color: salmon;
+}
+.order_content_bg .order_inner .order_content .order_close{
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bolder;
+    margin-right: 1em;
+}
+.order_content_bg .order_close:hover, 
+.order_content_bg .order_close:focus{
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/*評論*/
+.comments{
+    padding-bottom: 2em;
+    background-color: #FFFFDF;
+}
+.comments .cards{
+    width: 70%;
+    margin: 0 auto;
+}
+.comments .card {
+    display: flex;
+    margin-top: 1em;
+}
+.comments .card .client{
+    margin: 0 auto;
+    width: 30%;
+}
+.comments .client img{
+    width: 50%;
+    border-radius: 50%;
+    display: block;
+    margin: 0 auto;
+}
+.comments .card .container {
+    padding: 0.8em 1.6em;
+    width: 70%;
+    font-weight: bolder;
+    background-color: 	#F0F0F0;
+    border-radius: 1em;
+    margin:0 0.5em;
+}
+.comments .card .container .date{
+    margin-bottom: 1em;
+    display: block;
+    font-size: smaller;
+}
+/*你可能會喜歡*/
+.content .precautions .other_items{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 2em;
+}
+.content .precautions .other_items .item{
+    width: 31.333%;
+    margin: 0.8em 1%; 
+    background-color: white;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transform: scale(0.9);
+    position: relative;
+}
+.content .precautions .other_items .item:hover{
+    transform: scale(1);
+    transition: 0.7s ease;
+    cursor: pointer;
+}
+.content .precautions .other_items .item img{
+    width: 100%;
+}
+.content .precautions .other_items p{
+    display: block;
+    font-size: 1.5em; 
+    text-align: center;  
+    padding: 0.8em 0;
+    color: palevioletred;
+}
+.content .precautions .other_items .title{
+    display: block;
+    font-size: 2em;
+    text-align: center;  
+    padding:0.5em 0;
+}
+.content .precautions .other_items .loupeicon{
+    width: 15%;
+    position: absolute;
+    right: 5%;
+    top:3%;
+    background-color: lightgray;
+    padding: 0.8em;
+    border-radius: 50%;
+}
+/*訂購其他*/
+.other_content_bg{
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 6em;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0, 0.4);
+}
+.other_content_bg .other_inner{
+    margin:2em auto;
+    position: relative;
+}
+.other_content_bg .other_inner .other_content{
+    margin: 0 auto;
+    background-color:#FCFCFC;
+    display: flex;
+    padding: 4em;
+    align-items: center;
+    width: 80%;
+}
+.other_content_bg .other_inner .other_content .otherpic{
+    margin-right: 2em;
+    width: 40%;
+}
+.other_content_bg .other_inner .other_content img{
+    width: 100%;
+}
+.other_content_bg .other_inner .other_content .other_text{
+    width: 60%;
+}
+.other_content_bg .other_inner .other_content .otherName{
+    font-size: 2em;
+    font-weight: bolder;
+    color: slateblue;
+    margin-bottom: 0.8em;
+    text-align: center;
+}
+.other_content_bg .other_inner .other_content .ingredient{
+    font-size: 1em;
+    font-weight: bolder;
+    letter-spacing: 0.1em;
+    line-height: 1.2;
+    margin-bottom: 0.5em;
+    color: tomato;
+}
+.other_content_bg .other_inner .other_content .scription{
+    font-size: 1.2em;
+    font-weight: bolder;
+    letter-spacing: 0.3em;
+    text-align: justify;
+    line-height: 1.2;
+}
+.other_content_bg .other_inner .other_content .gobuy_btn{
+    text-align: right;
+    margin-top: 1em;
+}
+.other_content_bg .other_inner .other_content .gobuy_btn button{
+    padding: 0.6em;
+    background-color: sandybrown;
+    font-size: 1.2em;
+}
+.other_content_bg .other_inner .other_close{
+    color: #aaaaaa;
+    font-size: 2em;
+    font-weight: bolder;
+    position: absolute;
+    right: 7em;
+    top: 0.5em;
+}
+.other_content_bg .other_close:hover, 
+.other_content_bg .other_close:focus{
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+.footer{
+    background-color:rgba(0,0,0,0.7);
+}
+.footer ul{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2em 0;
+}
+.footer ul li{
+    margin: 0.8em 0;
+    font-size: 1.2em;
+    color: silver;
+}
+/*社交媒體連結*/
+.media_icon{
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    bottom: 1em;
+    right: 2em;
+}
+.media_icon img{
+    display: block;
+    width: 3em;
+    border-radius: 50%;
+    cursor: pointer;
+    margin-bottom: 0.5em;
+}
+.media_icon img:hover{
+    transform: scale(1.2);
+}
+.popup{
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+.popup:hover{
+    color: orange;
+}
+.popup .popuptext{
+    visibility: hidden;
+    width: 15em;
+    background-color: #FFCB47;
+    color: black;
+    border-radius: 2%;
+    padding: 2em 1em;
+    position: absolute;
+    bottom: 220%;
+    left: -137%;
+    line-height: 1.5;
+}
+.popup .popuptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -1em;
+    border-width: 1em;
+    border-style: solid;
+    border-color: #FFCB47 transparent transparent transparent;
+  }
+  .popup .show {
+    visibility: visible;
+    animation: fadeIn 1s
+  }
+  
+  /* Add animation (fade in the popup) */  
+  @keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity:1 ;}
+  }
+
+/*RWD*/
+@media screen and (max-width:768px){
+    .banner{
+        display: none;
+    }
+    /*.banner_bg{
+        padding: 10%;
+    }
+    .banner_text{
+        position: relative;
+        width: 90%;
+        padding: 1%;
+        left: 50%;
+    }
+    .banner_text span{
+        font-size: 1em;
+    }*/
+    .header{
+        display: block;
+        padding: 1em 0 0 0;
+    }
+    .header .menubar{
+        display: block;
+        width: 2em;
+        position: absolute;
+        right: 2em;
+        top: 2.2em;
+    }
+    .header .menu{
+        display: none;
+    }
+    .header .respon_menu{
+        position: relative;
+        display:block;
+        background: rgba(0,0,0,0.8);
+    }
+    .header .menu li{
+        width: 100%;
+    }
+    .header .menu li a{
+        color: wheat;
+    }
+    .header .menu .active{
+        background-color: #EEC4CB;
+        color: #000;
+        border-radius: 0;
+    }
+    .header .menu li a:hover{
+        background-color: #FBCF9A;
+        color: #5B5B5B;
+        border-radius: 0;
+    }
+    .content .item_flavor #flavor_slider{
+        width:100%;
+    }
+    #flavor_slider .slider_list{
+        width: 100%;
+    }
+    #flavor_slider .items{
+        width: 100%;
+        display: block;
+        margin: 4% 1%;
+    }
+    #flavor_slider .items .itempic{
+        width: 40%;
+        margin: 0 auto;
+    }
+    #flavor_slider .flavor_text h3{
+        font-size: 1.4em;
+        margin-bottom: 0.5em;
+        color: white;
+        background-color:#4c4c4c;
+        text-align: center;
+        letter-spacing: 0.2em;
+        padding: 0.5em 0;
+    }
+    .content .story{
+        padding: 0;
+        
+    }
+    .content .story .parallelogram{
+        width: 100%;
+        margin-left: 0em;
+        margin-top: 0.8em;
+        transform: skew(0);
+    }
+    .content .story .parallelogram h2{
+        font-size: 1.5em;
+    }
+    .animated{
+        opacity: 1;
+        transition: none;
+    }
+    .content .order_plan .plan_items{
+        display: block;
+    }
+    .content .order_plan .plan_items .item{
+        width: 100%;
+        margin: 0;
+        padding: 1.5em;
+        transform: none;
+    }
+    .way_content{
+        width: 80%;
+    }
+    .way_content button{
+        width: 50%;
+    }
+    .order_content_bg .order_inner {
+        width: 90%;
+    }
+    .comments .cards{
+        width: 100%;
+    }
+    .comments .card {
+        width: 100%;
+        padding: 0.2em 0em;
+    }
+    .comments .client img{
+        width: 80%;
+    }
+    .comments .card .container{
+        padding: 0.5em;
+    }
+    .showed{
+        opacity: 1;
+        transition: none;
+        transform: none;
+    }
+    .content .precautions .other_items{
+        display: block;
+    }
+    .content .precautions .other_items .item{
+        width: 100%;
+        transform: none;
+    }
+    .content .precautions .other_items .price{
+        font-size: 1.1em; 
+    }
+    .content .precautions .other_items .title{
+        font-size: 1.2em;
+    }
+    .media_icon{
+        bottom: 1em;
+        right: 1em;
+    }
+    .other_content_bg .other_inner{
+        margin:0 auto;
+    }
+    .other_content_bg .other_inner .other_content{
+        display: block;
+        width: 100%;
+        padding: 1em;
+    }
+    .other_content_bg .other_inner .other_content .otherpic{
+        margin-right: 0;
+        width: 100%;
+        margin-bottom: 1em;
+    }
+    .other_content_bg .other_inner .other_content .other_text{
+        width: 100%;
+    }
+    .other_content_bg .other_inner .other_content .gobuy_btn{
+        text-align: center;
+        margin-top: 0.8em;
+    }
+    .other_content_bg .other_inner .other_close{
+        text-align: right;
+        display: block;
+        background-color: #EEC4CB;
+        color: snow;
+        position: relative;
+        right: 0;
+        top: 0;
+        text-align: center;
+    }
+    
+
+}
